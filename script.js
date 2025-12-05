@@ -66,3 +66,18 @@ if ("IntersectionObserver" in window && faders.length) {
 
   faders.forEach((el) => observer.observe(el));
 }
+// ACCORDION
+document.querySelectorAll(".accordion-header").forEach(header => {
+  header.addEventListener("click", () => {
+    const accordion = header.parentElement;
+    accordion.classList.toggle("open");
+
+    const content = accordion.querySelector(".accordion-content");
+    if (accordion.classList.contains("open")) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = 0;
+    }
+  });
+});
+
