@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 
   <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
@@ -44,152 +45,270 @@
   <main class="main">
     <section class="section section-alt">
       <div class="section-inner">
-        
+
         <!-- PAGE TITLE -->
         <div class="section-header fade-in">
           <div class="section-kicker">Research</div>
           <h1 class="section-title">Applied Mathematics · Data Science · Cybersecurity</h1>
           <p class="section-sub">
-            My research spans turbulence modeling and simulation, quantitative finance, and modern cybersecurity
-            analytics including threat intelligence and malware analysis.
+            My research spans turbulence modeling and simulation, quantitative finance, and modern
+            cybersecurity analytics including threat intelligence and malware analysis.
           </p>
         </div>
 
-        <!-- ============================== -->
-        <!--        CFD & Turbulence        -->
-        <!-- ============================== -->
-        <div class="accordion fade-in">
-          <div class="accordion-header">
-            <h3>Computational Fluid Dynamics & Turbulence</h3>
-            <i class="fa-solid fa-chevron-down"></i>
+        <!-- TAGS / FILTERS -->
+        <div class="research-tags fade-in">
+          <span class="muted">Jump to:</span>
+          <button class="tag" data-target="cfd">CFD & Turbulence</button>
+          <button class="tag" data-target="quant">Quantitative Finance</button>
+          <button class="tag" data-target="cyber">Cybersecurity & Forensics</button>
+        </div>
+
+        <!-- IMPACT METRICS -->
+        <div class="metrics-grid fade-in">
+          <div class="metric-card">
+            <div class="metric-number">PhD</div>
+            <div class="metric-label">Applied Mathematics & Statistics</div>
           </div>
-
-          <div class="accordion-content">
-            <p class="muted">
-              Development of mathematically consistent and stable simulation methods for real turbulent flows,
-              including 
-              <a href="https://www.uwyo.edu/heinz/CES-3.pdf" target="_blank">Continuous Eddy Simulation (CES)</a>
-              (<a href="https://www.uwyo.edu/heinz/Adeyemi_Dissertation.pdf" target="_blank">dissertation</a>).
-              Work focuses on hybrid RANS–LES modeling and minimal-error strategies for high-Reynolds-number flows.
-            </p>
-
-            <ul class="icon-list">
-              <li><i class="fa-solid fa-water"></i>
-                Simulation method development using CES—providing continuous variations of modeled and resolved turbulence modes.
-              </li>
-              <li><i class="fa-solid fa-shield-halved"></i>
-                Stable and reliable formulations applicable to extremely large Reynolds numbers.
-              </li>
-              <li><i class="fa-solid fa-wind"></i>
-                Applications to aerospace flows and 
-                <a href="https://m2pi.ca/home/final-report/M2PI-2021-Final-Report.pdf" target="_blank">wind energy</a>
-                mesoscale–microscale coupling.
-              </li>
-              <li><i class="fa-solid fa-diagram-project"></i>
-                Wall-mounted hump benchmarks, MHD flows, and Casson fluid dynamics.
-              </li>
-              <li><i class="fa-solid fa-laptop-code"></i>
-                High-performance computing, OpenFOAM workflow automation, parallel simulation setup.
-              </li>
-            </ul>
-
-            <div class="accordion-figure">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Turbulence.jpg" alt="Turbulence Diagram">
-              <p class="muted">Visualization of vortex structures in turbulent flow.</p>
-            </div>
+          <div class="metric-card">
+            <div class="metric-number">+7 yrs</div>
+            <div class="metric-label">Industry analytics & modeling</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">Multi-domain</div>
+            <div class="metric-label">CFD · Quant · Cybersecurity</div>
           </div>
         </div>
 
         <!-- ============================== -->
-        <!--   Quantitative Finance & Trading -->
+        <!-- CFD & TURBULENCE (SIDE-BY-SIDE) -->
         <!-- ============================== -->
-        <div class="accordion fade-in">
-          <div class="accordion-header">
-            <h3>Quantitative Finance & Trading Analytics</h3>
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
+        <section id="cfd" class="research-block fade-in">
+          <div class="research-text">
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Computational Fluid Dynamics & Turbulence</h3>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
 
-          <div class="accordion-content">
-            <p class="muted">
-              Application of statistical modeling, machine learning, and stochastic analysis to financial markets,
-              risk assessment, and systematic trading system development.
-            </p>
+              <div class="accordion-content">
+                <p class="muted">
+                  Development of mathematically consistent and stable simulation methods for real
+                  turbulent flows, including
+                  <a href="https://www.uwyo.edu/heinz/CES-3.pdf" target="_blank" rel="noopener">
+                    Continuous Eddy Simulation (CES)
+                  </a>
+                  (<a href="https://www.uwyo.edu/heinz/Adeyemi_Dissertation.pdf"
+                      target="_blank" rel="noopener">dissertation</a>).
+                  Work focuses on hybrid RANS–LES modeling and minimal-error strategies for
+                  high-Reynolds-number flows.
+                </p>
 
-            <ul class="icon-list">
-              <li><i class="fa-solid fa-chart-line"></i>
-                Time-series forecasting (ARIMA, SARIMAX, GARCH) and volatility modeling.
-              </li>
-              <li><i class="fa-solid fa-coins"></i>
-                Derivatives pricing (Black–Scholes, Monte Carlo, PDE methods).
-              </li>
-              <li><i class="fa-solid fa-robot"></i>
-                Algorithmic trading system design, signal generation, and backtesting.
-              </li>
-              <li><i class="fa-solid fa-wallet"></i>
-                Portfolio optimization, VaR, stress testing, and multi-factor models.
-              </li>
-              <li><i class="fa-solid fa-chart-pie"></i>
-                Market microstructure analysis, liquidity modeling, and execution algorithms.
-              </li>
-            </ul>
-
-            <div class="accordion-figure">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/BlackScholes.png" alt="Quant Model Diagram">
-              <p class="muted">Black–Scholes option pricing surface.</p>
+                <ul class="icon-list">
+                  <li><i class="fa-solid fa-water"></i>
+                    CES-based simulation methods with continuous blending of modeled and resolved
+                    turbulence modes.
+                  </li>
+                  <li><i class="fa-solid fa-shield-halved"></i>
+                    Stable, reliable formulations applicable to extremely large Reynolds numbers.
+                  </li>
+                  <li><i class="fa-solid fa-wind"></i>
+                    Applications to aerospace configurations and
+                    <a href="https://m2pi.ca/home/final-report/M2PI-2021-Final-Report.pdf"
+                       target="_blank" rel="noopener">wind energy</a>
+                    mesoscale–microscale coupling.
+                  </li>
+                  <li><i class="fa-solid fa-diagram-project"></i>
+                    Wall-mounted hump benchmarks, MHD flows, and Casson fluid dynamics.
+                  </li>
+                  <li><i class="fa-solid fa-laptop-code"></i>
+                    High-performance computing and OpenFOAM workflow automation.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- ============================== -->
-        <!-- Cybersecurity & Forensics -->
-        <!-- ============================== -->
-        <div class="accordion fade-in">
-          <div class="accordion-header">
-            <h3>Cybersecurity, Digital Forensics & Malware Analysis</h3>
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
-
-          <div class="accordion-content">
-            <p class="muted">
-              Research interests include malware reverse engineering, digital forensics, fileless malware detection,
-              threat intelligence, and data-driven cyber defense analytics.
+          <div class="research-figure">
+            <img src="img/turbulent-jet.jpg"
+                 alt="Visualization of vortex structures in a submerged turbulent jet" />
+            <p class="muted small">
+              False-color visualization of a submerged turbulent jet made visible using
+              laser-induced fluorescence (C. Fukushima &amp; J. Westerweel, TU Delft, CC BY 3.0).
             </p>
+          </div>
+        </section>
 
-            <ul class="icon-list">
-              <li><i class="fa-solid fa-bug"></i>
-                Fileless malware analysis, registry-based persistence detection, and behavior profiling.
-              </li>
-              <li><i class="fa-solid fa-code"></i>
-                Static & dynamic analysis, reverse engineering, disassembly tools (Ghidra, IDA).
-              </li>
-              <li><i class="fa-solid fa-shield"></i>
-                Threat intelligence lifecycle, enrichment, correlation, MITRE ATT&CK mapping.
-              </li>
-              <li><i class="fa-solid fa-search"></i>
-                SIEM log forensics, anomaly detection, response workflows.
-              </li>
-              <li><i class="fa-solid fa-network-wired"></i>
-                Network packet forensics (Wireshark), intrusion detection (Suricata, Zeek).
-              </li>
-            </ul>
+        <!-- ====================================== -->
+        <!-- QUANTITATIVE FINANCE & TRADING ANALYSIS -->
+        <!-- ====================================== -->
+        <section id="quant" class="research-block fade-in">
+          <div class="research-text">
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Quantitative Finance & Trading Analytics</h3>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
 
-            <div class="accordion-figure">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Malware_Analysis.png" alt="Malware Analysis Diagram">
-              <p class="muted">Digital forensics & malware investigation workflow.</p>
+              <div class="accordion-content">
+                <p class="muted">
+                  Application of statistical modeling, stochastic analysis, and machine learning to
+                  financial markets, risk assessment, and systematic trading strategy development.
+                </p>
+
+                <ul class="icon-list">
+                  <li><i class="fa-solid fa-chart-line"></i>
+                    Time-series forecasting (ARIMA, SARIMAX, GARCH) and volatility modeling.
+                  </li>
+                  <li><i class="fa-solid fa-coins"></i>
+                    Derivatives pricing and hedging based on the Black–Scholes framework and
+                    Monte Carlo simulation.
+                  </li>
+                  <li><i class="fa-solid fa-robot"></i>
+                    Algorithmic trading system design, signal generation, and backtesting.
+                  </li>
+                  <li><i class="fa-solid fa-wallet"></i>
+                    Portfolio optimization, VaR, stress testing, and multi-factor risk models.
+                  </li>
+                  <li><i class="fa-solid fa-chart-pie"></i>
+                    Market microstructure analysis, liquidity modeling, and execution strategies.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+
+          <div class="research-figure">
+            <img src="img/black-scholes-surface.svg"
+                 alt="Call option value diagram for the Black–Scholes model" />
+            <p class="muted small">
+              Call option value diagram under the Black–Scholes model (Munasca, CC BY-SA 4.0).
+            </p>
+          </div>
+        </section>
+
+        <!-- ================================== -->
+        <!-- CYBERSECURITY & MALWARE ANALYSIS   -->
+        <!-- ================================== -->
+        <section id="cyber" class="research-block fade-in">
+          <div class="research-text">
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Cybersecurity, Digital Forensics & Malware Analysis</h3>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+
+              <div class="accordion-content">
+                <p class="muted">
+                  Research interests in malware behavior, digital forensics pipelines, fileless
+                  malware detection, and threat intelligence for modern enterprise environments.
+                </p>
+
+                <ul class="icon-list">
+                  <li><i class="fa-solid fa-bug"></i>
+                    Fileless malware analysis, registry and memory-resident payload detection.
+                  </li>
+                  <li><i class="fa-solid fa-code"></i>
+                    Static and dynamic analysis, reverse engineering, and binary inspection.
+                  </li>
+                  <li><i class="fa-solid fa-shield"></i>
+                    Threat intelligence lifecycle, IOC correlation, and MITRE ATT&amp;CK mapping.
+                  </li>
+                  <li><i class="fa-solid fa-search"></i>
+                    SIEM log forensics, anomaly detection, and incident response workflows.
+                  </li>
+                  <li><i class="fa-solid fa-network-wired"></i>
+                    Network packet forensics using tools such as Wireshark, Suricata, and Zeek.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="research-figure">
+            <img src="img/malware-graph.png"
+                 alt="Diagram of malware families and relationships" />
+            <p class="muted small">
+              Malware family relationship graph (Andrew313 / Krzysztof Zajączkowski, CC BY-SA).
+            </p>
+          </div>
+        </section>
+
+        <!-- ====================== -->
+        <!--  RESEARCH TIMELINE     -->
+        <!-- ====================== -->
+        <section class="timeline-section fade-in">
+          <h2 class="section-subheading">Research Timeline</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">2016–2019</div>
+              <div class="timeline-content">
+                <h3>M.Sc. & Research Assistant – University of Saskatchewan</h3>
+                <p class="muted">
+                  Graduate work in applied mathematics and statistics; early projects in CFD,
+                  stochastic modeling, and data-driven analysis for environmental and financial
+                  datasets.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">2019–2024</div>
+              <div class="timeline-content">
+                <h3>PhD & Quantitative Research – University of Wyoming</h3>
+                <p class="muted">
+                  Doctoral research on hybrid RANS–LES / CES methods and high-fidelity turbulence
+                  simulation, combined with quantitative modeling for enrollment and financial risk.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">2024–Present</div>
+              <div class="timeline-content">
+                <h3>Industry Research & Data Science – Saskatchewan Indian Gaming Authority</h3>
+                <p class="muted">
+                  Applied work in revenue forecasting, credit risk, player analytics, and emerging
+                  research in cyber-forensics, malware analysis, and security analytics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================ -->
+        <!-- DOWNLOADABLE RESEARCH DOCS   -->
+        <!-- ============================ -->
+        <section class="research-downloads fade-in">
+          <h2 class="section-subheading">Research Statements</h2>
+          <p class="muted">
+            Concise PDF overviews of my current research directions. Add these files to your
+            repository to enable downloads.
+          </p>
+          <div class="download-buttons">
+            <a class="btn-download" href="research_statement_cfd.pdf" download>
+              <i class="fa-solid fa-file-pdf"></i>
+              Applied Mathematics &amp; CFD
+            </a>
+            <a class="btn-download" href="research_statement_quant.pdf" download>
+              <i class="fa-solid fa-file-pdf"></i>
+              Quantitative Finance &amp; Data Science
+            </a>
+            <a class="btn-download" href="research_statement_cyber.pdf" download>
+              <i class="fa-solid fa-file-pdf"></i>
+              Cybersecurity &amp; Malware Analysis
+            </a>
+          </div>
+        </section>
 
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     © <span id="year"></span> Dr. Adeyemi Fagbade. All rights reserved.
   </footer>
 
-  <!-- BACK TO TOP -->
   <button id="backToTop" title="Back to top">↑</button>
 </div>
 
