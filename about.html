@@ -1,64 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="light">
 <head>
+  <meta charset="UTF-8" />
   <title>About | Dr. Adeyemi Fagbade</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<div class="page">
 
-<!-- NAVBAR -->
-<header>
-  <div class="nav-container">
-    <div class="brand">
-      <div class="brand-logo">AF</div>
-      <div>
-        <div class="brand-name">ADEYEMI FAGBADE</div>
-        <div class="brand-sub">Research Scientist · Data Scientist</div>
+  <!-- HEADER (same as index) -->
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-logo">AF</div>
+        <div class="brand-text">
+          <div class="brand-name">ADEYEMI FAGBADE</div>
+          <div class="brand-sub">Research Scientist · Data Scientist</div>
+        </div>
+      </div>
+      <div class="nav-right">
+        <button id="themeToggle" class="theme-toggle" type="button">🌙 Dark</button>
+        <button id="navToggle" class="nav-toggle" type="button">☰</button>
+        <nav>
+          <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="code.html">Code</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
+  </header>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="code.html">Code</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <main class="main">
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-header fade-in">
+          <div class="section-kicker">About</div>
+          <h1 class="section-title">Biography & background</h1>
+          <p class="section-sub">
+            I am an applied mathematician and data scientist based in Saskatoon, Canada, with experience
+            that spans academia, industry analytics, and mathematics education.
+          </p>
+        </div>
 
-  </div>
-</header>
+        <div class="grid-2">
+          <article class="card fade-in">
+            <h3>Who I am</h3>
+            <p>
+              I work at the intersection of <strong>applied mathematics</strong>, <strong>CFD</strong>,
+              and <strong>data science</strong>, designing models that are both mathematically rigorous
+              and usable by decision-makers in gaming, finance, and engineering.
+            </p>
+            <p class="muted">
+              Whether simulating turbulent flows over complex geometries or building revenue forecasting
+              models for casinos, my goal is to turn data and equations into clear, actionable insight.
+            </p>
+          </article>
 
-<section class="section">
-  <h2 class="section-title">About Me</h2>
-  <p>
-    I am a Research Scientist and Data Scientist with expertise in Applied Mathematics, 
-    Computational Fluid Dynamics, Turbulence Modeling, and Predictive Analytics.
-  </p>
+          <article class="card fade-in">
+            <h3>Education & training</h3>
+            <ul class="list">
+              <li><strong>Ph.D. Applied Mathematics</strong>, minor in Statistics – University of Wyoming (2024)</li>
+              <li><strong>Grad Certificate</strong> in GIS & Remote Sensing – University of Wyoming (2023)</li>
+              <li><strong>M.Sc. Applied Mathematics</strong> (Numerical Analysis) – University of Saskatchewan (2019)</li>
+              <li><strong>M.Tech. Industrial Mathematics</strong> (Fluid Dynamics) – FUT Akure (2014)</li>
+              <li><strong>B.Tech. Mathematical Sciences</strong> – FUT Akure (2010)</li>
+              <li><strong>National Diploma</strong>, Mechanical Engineering – Federal Poly Offa (2005)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <p>I completed my PhD in Applied Mathematics (with a Statistics minor) at the University of Wyoming.</p>
+  <footer>
+    © <span id="year"></span> Dr. Adeyemi Fagbade. All rights reserved.
+  </footer>
+  <button id="backToTop" title="Back to top">↑</button>
+</div>
 
-  <p>I enjoy combining mathematics, modeling, and programming to solve problems in engineering, finance,
-  gaming analytics, cyber-forensics, and research.</p>
-
-  <h3>Education</h3>
-  <ul>
-    <li>Ph.D., Applied Mathematics – University of Wyoming</li>
-    <li>M.Sc., Applied Mathematics – University of Saskatchewan</li>
-    <li>M.Tech., Industrial Mathematics – FUT Akure</li>
-    <li>B.Tech., Mathematics – FUT Akure</li>
-    <li>National Diploma, Mechanical Engineering – Federal Poly Offa</li>
-  </ul>
-
-</section>
-
-<footer>
-  © <script>document.write(new Date().getFullYear())</script> Dr. Adeyemi Fagbade
-</footer>
-
+<script src="script.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
