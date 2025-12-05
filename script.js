@@ -80,4 +80,29 @@ document.querySelectorAll(".accordion-header").forEach(header => {
     }
   });
 });
+// Accordion behavior
+document.querySelectorAll(".accordion-header").forEach(header => {
+  header.addEventListener("click", () => {
+    const accordion = header.closest(".accordion");
+    accordion.classList.toggle("open");
+
+    const content = accordion.querySelector(".accordion-content");
+    if (accordion.classList.contains("open")) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = 0;
+    }
+  });
+});
+
+// Clickable tags -> smooth scroll to section
+document.querySelectorAll(".research-tags .tag").forEach(tag => {
+  tag.addEventListener("click", () => {
+    const targetId = tag.getAttribute("data-target");
+    const el = document.getElementById(targetId);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
+
 
