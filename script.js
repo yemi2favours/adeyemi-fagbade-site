@@ -1,4 +1,6 @@
-// THEME TOGGLE
+/* =====================================================
+   Theme Toggle
+===================================================== */
 const themeToggle = document.getElementById("themeToggle");
 const storedTheme = localStorage.getItem("theme");
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -6,52 +8,55 @@ const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 function setTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
-  if (themeToggle) {
-    themeToggle.textContent = theme === "dark" ? "☀️ Light" : "🌙 Dark";
-  }
+  themeToggle.textContent = theme === "dark" ? "☀️ Light" : "🌙 Dark";
 }
 
-// initial theme
+// Initialize theme
 setTheme(storedTheme || (prefersDark ? "dark" : "light"));
 
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme");
-    setTheme(current === "dark" ? "light" : "dark");
-  });
-}
+themeToggle.addEventListener("click", () => {
+  const current = document.documentElement.getAttribute("data-theme");
+  setTheme(current === "dark" ? "light" : "dark");
+});
 
-// MOBILE NAV TOGGLE
+
+/* =====================================================
+   Mobile Navigation
+===================================================== */
 const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
 
-if (navToggle && navLinks) {
-  navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
+navToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
 
-  navLinks.addEventListener("click", (e) => {
-    if (e.target.tagName === "A") {
-      navLinks.classList.remove("open");
-    }
-  });
-}
+navLinks.addEventListener("click", (e) => {
+  if (e.target.tagName === "A") {
+    navLinks.classList.remove("open");
+  }
+});
 
-// BACK TO TOP BUTTON
+
+/* =====================================================
+   Back to Top Button
+===================================================== */
 const backToTop = document.getElementById("backToTop");
-if (backToTop) {
-  window.addEventListener("scroll", () => {
-    backToTop.style.display = window.scrollY > 300 ? "block" : "none";
-  });
 
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-}
+window.addEventListener("scroll", () => {
+  backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+});
 
-// FADE-IN ON SCROLL
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+
+/* =====================================================
+   Fade-In Animation on Scroll
+===================================================== */
 const faders = document.querySelectorAll(".fade-in");
-if ("IntersectionObserver" in window && faders.length) {
+
+if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -66,27 +71,18 @@ if ("IntersectionObserver" in window && faders.length) {
 
   faders.forEach((el) => observer.observe(el));
 }
-// ACCORDION
-document.querySelectorAll(".accordion-header").forEach(header => {
-  header.addEventListener("click", () => {
-    const accordion = header.parentElement;
-    accordion.classList.toggle("open");
 
-    const content = accordion.querySelector(".accordion-content");
-    if (accordion.classList.contains("open")) {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } else {
-      content.style.maxHeight = 0;
-    }
-  });
-});
-// Accordion behavior
-document.querySelectorAll(".accordion-header").forEach(header => {
+
+/* =====================================================
+   Accordion Component (FINAL + WORKING)
+===================================================== */
+document.querySelectorAll(".accordion-header").forEach((header) => {
   header.addEventListener("click", () => {
     const accordion = header.closest(".accordion");
+    const content = accordion.querySelector(".accordion-content");
+
     accordion.classList.toggle("open");
 
-    const content = accordion.querySelector(".accordion-content");
     if (accordion.classList.contains("open")) {
       content.style.maxHeight = content.scrollHeight + "px";
     } else {
@@ -95,14 +91,15 @@ document.querySelectorAll(".accordion-header").forEach(header => {
   });
 });
 
-// Clickable tags -> smooth scroll to section
-document.querySelectorAll(".research-tags .tag").forEach(tag => {
+
+/* =====================================================
+   Clickable Research Tags (smooth scroll)
+===================================================== */
+document.querySelectorAll(".tag").forEach((tag) => {
   tag.addEventListener("click", () => {
     const targetId = tag.getAttribute("data-target");
-    const el = document.getElementById(targetId);
-    if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    const target = document.getElementById(targetId);
+    if (!target) return;
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
-
-
