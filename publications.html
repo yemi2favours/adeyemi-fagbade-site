@@ -1,49 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="light">
 <head>
+  <meta charset="UTF-8" />
   <title>Publications | Dr. Adeyemi Fagbade</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<div class="page">
 
-<header>
-  <div class="nav-container">
-    <div class="brand"><div class="brand-logo">AF</div>
-      <div><div class="brand-name">ADEYEMI FAGBADE</div><div class="brand-sub">Research Scientist · Data Scientist</div></div>
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-logo">AF</div>
+        <div class="brand-text">
+          <div class="brand-name">ADEYEMI FAGBADE</div>
+          <div class="brand-sub">Research Scientist · Data Scientist</div>
+        </div>
+      </div>
+      <div class="nav-right">
+        <button id="themeToggle" class="theme-toggle" type="button">🌙 Dark</button>
+        <button id="navToggle" class="nav-toggle" type="button">☰</button>
+        <nav>
+          <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="code.html">Code</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <nav><ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="code.html">Code</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul></nav>
-  </div>
-</header>
+  </header>
 
-<section class="section">
-<h2 class="section-title">Selected Publications</h2>
+  <main class="main">
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-header fade-in">
+          <div class="section-kicker">Publications</div>
+          <h1 class="section-title">Selected work</h1>
+          <p class="section-sub">
+            A sample of peer-reviewed articles and conference papers. For a complete list, please download my CV.
+          </p>
+        </div>
 
-<ul>
-  <li><strong>Heinz & Fagbade (2025)</strong> — Metrics for partially and fully resolving turbulent flows. <em>IJHFF</em>.</li>
-  <li><strong>Heinz & Fagbade (2024)</strong> — Continuous Eddy Simulation. TSFP-13, Montreal.</li>
-  <li><strong>Fagbade & Heinz (2024)</strong> — CES vs Resolution-Imposing Methods. <em>Fluids</em>.</li>
-  <li><strong>Heinz & Fagbade (2024)</strong> — Minimal Error Simulation Methods. AIAA SCITECH.</li>
-  <li><strong>Fagbade (2022)</strong> — MHD Casson Fluid Flow – <em>JHMTR</em>.</li>
-  <li><strong>Fagbade & Heinz (2022)</strong> — Hybrid RANS–LES for NASA Hump Flow. AIAA SCITECH.</li>
-</ul>
+        <div class="grid-2">
+          <article class="card fade-in">
+            <h3>Recent journal articles</h3>
+            <ul class="pub-list">
+              <li>
+                <div class="pub-title">
+                  Heinz, S. &amp; Fagbade, A. (2025).
+                  Evaluating metrics for partially and fully resolving simulation methods for turbulent flows.
+                </div>
+                <div class="pub-meta"><em>International Journal of Heat and Fluid Flow</em>, 115, 109867.</div>
+              </li>
+              <li>
+                <div class="pub-title">
+                  Fagbade, A.I. &amp; Heinz, S. (2024).
+                  Continuous Eddy Simulation vs Resolution-Imposing Simulation Methods for Turbulent Flows.
+                </div>
+                <div class="pub-meta"><em>Fluids</em>, 9(22).</div>
+              </li>
+              <li>
+                <div class="pub-title">
+                  Fagbade, A.I. (2022).
+                  Spectral Quasi-Linearization Approach for Unsteady MHD Boundary Layer Flow of Casson Fluid…
+                </div>
+                <div class="pub-meta">
+                  <em>Journal of Heat and Mass Transfer Research</em>, 9, 269–278.
+                </div>
+              </li>
+            </ul>
+          </article>
 
-<p>Full publication list available in my  
-<a href="Adeyemi_F8A5830.JPG">academic CV</a>.</p>
+          <article class="card fade-in">
+            <h3>Conference papers</h3>
+            <ul class="pub-list">
+              <li>
+                <div class="pub-title">
+                  Heinz, S. &amp; Fagbade, A. (2024). Continuous Eddy Simulation (CES): Conceptual approach and applications.
+                </div>
+                <div class="pub-meta">TSFP-13, Montreal, TSFP Paper 2024-277.</div>
+              </li>
+              <li>
+                <div class="pub-title">
+                  Heinz, S. &amp; Fagbade, A.I. (2024). Benefit of Minimal Error Simulation Methods for Turbulent Flows.
+                </div>
+                <div class="pub-meta">AIAA SCITECH 2024 Forum.</div>
+              </li>
+              <li>
+                <div class="pub-title">
+                  Fagbade, A.I. &amp; Heinz, S. (2022). Mode-Controlled Hybrid RANS–LES for NASA Wall-Mounted Hump Flow.
+                </div>
+                <div class="pub-meta">AIAA SCITECH 2022 Forum.</div>
+              </li>
+            </ul>
+            <p class="muted" style="margin-top:0.8rem;">
+              Full publication list: <a href="Adeyemi_Fagbade_academic_Resume_new.docx">Download academic CV</a>.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-</section>
+  <footer>
+    © <span id="year"></span> Dr. Adeyemi Fagbade. All rights reserved.
+  </footer>
+  <button id="backToTop" title="Back to top">↑</button>
+</div>
 
-<footer>
-  © <script>document.write(new Date().getFullYear())</script> Dr. Adeyemi Fagbade
-</footer>
-
+<script src="script.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
