@@ -1,60 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="light">
 <head>
+  <meta charset="UTF-8" />
   <title>Research | Dr. Adeyemi Fagbade</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<header>
-  <div class="nav-container">
-    <div class="brand"><div class="brand-logo">AF</div>
-      <div><div class="brand-name">ADEYEMI FAGBADE</div><div class="brand-sub">Research Scientist · Data Scientist</div></div>
+<div class="page">
+  <!-- HEADER -->
+  <!-- (same pattern as above pages) -->
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-logo">AF</div>
+        <div class="brand-text">
+          <div class="brand-name">ADEYEMI FAGBADE</div>
+          <div class="brand-sub">Research Scientist · Data Scientist</div>
+        </div>
+      </div>
+      <div class="nav-right">
+        <button id="themeToggle" class="theme-toggle" type="button">🌙 Dark</button>
+        <button id="navToggle" class="nav-toggle" type="button">☰</button>
+        <nav>
+          <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="code.html">Code</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <nav><ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="code.html">Code</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul></nav>
-  </div>
-</header>
+  </header>
 
-<section class="section">
-<h2 class="section-title">Research Focus</h2>
+  <main class="main">
+    <section class="section section-alt">
+      <div class="section-inner">
+        <div class="section-header fade-in">
+          <div class="section-kicker">Research</div>
+          <h1 class="section-title">Applied mathematics & data science</h1>
+          <p class="section-sub">
+            My work spans high-fidelity numerical simulation of turbulent flows and data-driven modeling
+            for risk, revenue, and security analytics.
+          </p>
+        </div>
 
-<h3>Computational Fluid Dynamics</h3>
-<ul>
-  <li>Hybrid RANS–LES Turbulence Modeling</li>
-  <li>Continuous Eddy Simulation (CES)</li>
-  <li>Wall-bounded turbulent flows</li>
-  <li>High-performance computing</li>
-</ul>
+        <div class="grid-2">
+          <article class="card fade-in">
+            <h3>Computational Fluid Dynamics & Turbulence</h3>
+            <p class="muted">
+              PhD research on hybrid RANS–LES approaches, Continuous Eddy Simulation (CES), and minimal-error
+              simulation strategies for wall-bounded turbulence.
+            </p>
+            <ul class="list">
+              <li>Hybrid RANS–LES & CES</li>
+              <li>Wall-mounted hump flow & aerodynamic benchmarks</li>
+              <li>MHD & non-Newtonian Casson fluids</li>
+              <li>High-performance computing with OpenFOAM</li>
+            </ul>
+          </article>
 
-<h3>Data Science & Predictive Analytics</h3>
-<ul>
-  <li>Risk & Portfolio Modeling</li>
-  <li>Machine Learning</li>
-  <li>Gaming Revenue Forecasting</li>
-  <li>Causal Inference & Experimentation</li>
-</ul>
+          <article class="card fade-in">
+            <h3>Data Science, Risk & Analytics</h3>
+            <p class="muted">
+              In industry, I design models for forecasting, risk, and growth, with emerging interests in
+              cyber-forensics and malware analytics.
+            </p>
+            <ul class="list">
+              <li>Credit risk & expected credit loss (IFRS 9)</li>
+              <li>Portfolio & revenue forecasting</li>
+              <li>Marketing mix modeling & multi-touch attribution</li>
+              <li>Player segmentation, propensity & uplift modeling</li>
+              <li>Cybersecurity analytics & anomaly detection (interest)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<h3>Cybersecurity & Malware Forensics (Interest)</h3>
-<ul>
-  <li>Fileless malware behavior</li>
-  <li>Threat intelligence</li>
-  <li>Anomaly detection using ML</li>
-</ul>
+  <footer>
+    © <span id="year"></span> Dr. Adeyemi Fagbade. All rights reserved.
+  </footer>
+  <button id="backToTop" title="Back to top">↑</button>
+</div>
 
-</section>
-
-<footer>
-  © <script>document.write(new Date().getFullYear())</script> Dr. Adeyemi Fagbade
-</footer>
-
+<script src="script.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
