@@ -671,10 +671,15 @@ html[data-theme="dark"] .card {
   font-size: 1rem;
   color: var(--accent);
 }
-
 /* =====================================================
-   PUBLICATIONS PAGE
+   PUBLICATIONS PAGE – CARDS, FILTERS, BIBTEX (BC-3)
 ===================================================== */
+
+.pub-list {
+  margin-top: 1.5rem;
+}
+
+/* Card container */
 .pub-card {
   background: var(--bg-section);
   padding: 1.2rem 1.3rem;
@@ -682,34 +687,91 @@ html[data-theme="dark"] .card {
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-soft);
   margin-bottom: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Main text block */
+.pub-main {
+  margin-bottom: 0.3rem;
 }
 
 .pub-title {
   font-size: 1.05rem;
   font-weight: 700;
+  margin: 0 0 0.25rem;
 }
 
 .pub-meta {
   font-size: 0.85rem;
   color: var(--text-muted);
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.4rem;
 }
 
+/* Small in-card tags */
+.pub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.pub-tag {
+  font-size: 0.74rem;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(255,255,255,0.8);
+}
+
+html[data-theme="dark"] .pub-tag {
+  background: #020617;
+}
+
+/* Button row */
 .pub-actions {
   display: flex;
-  gap: 0.6rem;
   flex-wrap: wrap;
-  margin-bottom: 0.6rem;
+  gap: 0.55rem;
+  margin: 0.3rem 0 0.25rem;
 }
 
-.pub-bib {
-  background: var(--bg-section-alt);
+/* Abstract block (hidden by default) */
+.pub-abstract {
+  display: none;
+  margin-top: 0.4rem;
+  padding: 0.65rem 0.8rem;
   border-radius: 10px;
-  padding: 1rem;
+  background: var(--bg-section-alt);
+  font-size: 0.88rem;
+  color: var(--text-main);
+  border-left: 3px solid var(--accent);
+}
+
+/* BibTeX block (hidden by default) */
+.pub-bib {
+  background: #0206170a;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
   white-space: pre-wrap;
   display: none;
   font-size: 0.85rem;
+  margin-top: 0.4rem;
+  border: 1px solid var(--border-subtle);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+
+/* Slight tweak for dark mode BibTeX */
+html[data-theme="dark"] .pub-bib {
+  background: #020617;
+  border-color: #1f2937;
+}
+
+/* Active filter button styling (re-uses .tag) */
+.pub-filter.active {
+  background: var(--accent-soft);
+}
+
 
 /* =====================================================
    RESPONSIVE
