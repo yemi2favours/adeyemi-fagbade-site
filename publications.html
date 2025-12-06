@@ -30,4 +30,314 @@
         <button id="navToggle" class="nav-toggle">☰</button>
 
         <nav>
-          <ul id="navLinks
+          <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="code.html">Code</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+    <section class="section section-alt">
+      <div class="section-inner">
+
+        <!-- PAGE HEADER -->
+        <div class="section-header fade-in">
+          <div class="section-kicker">Publications</div>
+          <h1 class="section-title">Peer-Reviewed Articles & Research Output</h1>
+          <p class="section-sub">
+            A curated selection of dissertations, journal articles, applied reports, and in-progress work
+            spanning turbulence modeling, quantitative finance, data science, and cybersecurity analytics.
+          </p>
+        </div>
+
+        <!-- FILTER TAGS -->
+        <div class="research-tags fade-in">
+          <span class="muted">Filter:</span>
+          <button class="tag pub-filter active" data-topic="all">All</button>
+          <button class="tag pub-filter" data-topic="cfd">CFD & Turbulence</button>
+          <button class="tag pub-filter" data-topic="quant">Quant Finance</button>
+          <button class="tag pub-filter" data-topic="ml">ML & Data Science</button>
+          <button class="tag pub-filter" data-topic="cyber">Cybersecurity</button>
+          <button class="tag pub-filter" data-topic="report">Reports & Theses</button>
+        </div>
+
+        <!-- PUBLICATION LIST -->
+        <div class="pub-list fade-in">
+
+          <!-- 1. PhD DISSERTATION -->
+          <article class="pub-card" data-topic="cfd">
+            <div class="pub-main">
+              <h2 class="pub-title">
+                Continuous Eddy Simulation for Turbulent Wall-Bounded Flows
+              </h2>
+              <div class="pub-meta">
+                Adeyemi Fagbade · PhD Dissertation · University of Wyoming · 2024
+              </div>
+              <div class="pub-tags">
+                <span class="pub-tag">CFD</span>
+                <span class="pub-tag">Turbulence</span>
+                <span class="pub-tag">CES</span>
+                <span class="pub-tag">Hybrid RANS–LES</span>
+              </div>
+            </div>
+
+            <div class="pub-actions">
+              <a class="btn-download" href="Adeyemi_Dissertation.pdf" target="_blank">
+                <i class="fa-solid fa-file-pdf"></i> PDF
+              </a>
+              <button class="btn-download pub-abs-btn" type="button">
+                <i class="fa-solid fa-align-left"></i> Abstract
+              </button>
+              <button class="btn-download pub-bib-btn" type="button">
+                <i class="fa-solid fa-code"></i> BibTeX
+              </button>
+              <button class="btn-download pub-copy"
+                      type="button"
+                      data-text="@phdthesis{fagbade2024ces,
+  title={Continuous Eddy Simulation for Turbulent Wall-Bounded Flows},
+  author={Fagbade, Adeyemi},
+  school={University of Wyoming},
+  year={2024}
+}">
+                <i class="fa-solid fa-copy"></i> Cite
+              </button>
+            </div>
+
+            <div class="pub-abstract">
+              <p>
+                This dissertation develops and analyzes Continuous Eddy Simulation (CES) strategies for
+                turbulent wall-bounded flows. The work formulates mathematically consistent blending
+                between modeled and resolved turbulence scales and demonstrates stable performance at
+                very high Reynolds numbers on canonical benchmarks, including wall-mounted hump flows
+                and aerospace-relevant configurations.
+              </p>
+            </div>
+
+            <pre class="pub-bib">
+@phdthesis{fagbade2024ces,
+  title   = {Continuous Eddy Simulation for Turbulent Wall-Bounded Flows},
+  author  = {Fagbade, Adeyemi},
+  school  = {University of Wyoming},
+  year    = {2024}
+}
+            </pre>
+          </article>
+
+          <!-- 2. QUANT / VOLATILITY MODELING -->
+          <article class="pub-card" data-topic="quant">
+            <div class="pub-main">
+              <h2 class="pub-title">
+                Forecasting Financial Volatility Using Hybrid ML–Stochastic Models
+              </h2>
+              <div class="pub-meta">
+                A. Fagbade · Journal of Quantitative Finance (under review) · 2024
+              </div>
+              <div class="pub-tags">
+                <span class="pub-tag">Quant</span>
+                <span class="pub-tag">GARCH</span>
+                <span class="pub-tag">Machine Learning</span>
+              </div>
+            </div>
+
+            <div class="pub-actions">
+              <button class="btn-download pub-abs-btn" type="button">
+                <i class="fa-solid fa-align-left"></i> Abstract
+              </button>
+              <button class="btn-download pub-bib-btn" type="button">
+                <i class="fa-solid fa-code"></i> BibTeX
+              </button>
+              <button class="btn-download pub-copy"
+                      type="button"
+                      data-text="@article{fagbade_quant_2024,
+  title   = {Forecasting Financial Volatility Using Hybrid ML–Stochastic Models},
+  author  = {Fagbade, Adeyemi},
+  journal = {Journal of Quantitative Finance},
+  year    = {2024},
+  note    = {Under review}
+}">
+                <i class="fa-solid fa-copy"></i> Cite
+              </button>
+            </div>
+
+            <div class="pub-abstract">
+              <p>
+                This work combines classical stochastic volatility models with modern machine learning
+                architectures to improve forecast accuracy for high-frequency financial returns. The
+                hybrid framework integrates GARCH-type dynamics with nonlinear feature learners and is
+                evaluated on equity and FX markets with rigorous backtesting.
+              </p>
+            </div>
+
+            <pre class="pub-bib">
+@article{fagbade_quant_2024,
+  title   = {Forecasting Financial Volatility Using Hybrid ML--Stochastic Models},
+  author  = {Fagbade, Adeyemi},
+  journal = {Journal of Quantitative Finance},
+  year    = {2024},
+  note    = {Under review}
+}
+            </pre>
+          </article>
+
+          <!-- 3. CYBERSECURITY / FILELESS MALWARE -->
+          <article class="pub-card" data-topic="cyber">
+            <div class="pub-main">
+              <h2 class="pub-title">
+                Behavioral Detection of Fileless Malware Using Statistical Anomaly Modeling
+              </h2>
+              <div class="pub-meta">
+                A. Fagbade · Cybersecurity Research Letters · 2024
+              </div>
+              <div class="pub-tags">
+                <span class="pub-tag">Cybersecurity</span>
+                <span class="pub-tag">Malware</span>
+                <span class="pub-tag">Anomaly Detection</span>
+              </div>
+            </div>
+
+            <div class="pub-actions">
+              <button class="btn-download pub-abs-btn" type="button">
+                <i class="fa-solid fa-align-left"></i> Abstract
+              </button>
+              <button class="btn-download pub-bib-btn" type="button">
+                <i class="fa-solid fa-code"></i> BibTeX
+              </button>
+              <button class="btn-download pub-copy"
+                      type="button"
+                      data-text="@article{fagbade_fileless_2024,
+  title   = {Behavioral Detection of Fileless Malware Using Statistical Anomaly Modeling},
+  author  = {Fagbade, Adeyemi},
+  journal = {Cybersecurity Research Letters},
+  year    = {2024}
+}">
+                <i class="fa-solid fa-copy"></i> Cite
+              </button>
+            </div>
+
+            <div class="pub-abstract">
+              <p>
+                This paper proposes a behavioral analytics framework for detecting fileless malware
+                campaigns using statistical anomaly modeling over process, registry, and memory
+                activity. The approach emphasizes interpretability and maps anomalies to MITRE ATT&amp;CK
+                techniques to support incident response and threat hunting.
+              </p>
+            </div>
+
+            <pre class="pub-bib">
+@article{fagbade_fileless_2024,
+  title   = {Behavioral Detection of Fileless Malware Using Statistical Anomaly Modeling},
+  author  = {Fagbade, Adeyemi},
+  journal = {Cybersecurity Research Letters},
+  year    = {2024}
+}
+            </pre>
+          </article>
+
+          <!-- 4. DATA SCIENCE / APPLIED ANALYTICS REPORT -->
+          <article class="pub-card" data-topic="ml">
+            <div class="pub-main">
+              <h2 class="pub-title">
+                Marketing Mix Modeling and Player Analytics for Gaming Revenue Optimization
+              </h2>
+              <div class="pub-meta">
+                A. Fagbade · Internal Analytics Report · Saskatchewan Indian Gaming Authority · 2024
+              </div>
+              <div class="pub-tags">
+                <span class="pub-tag">Data Science</span>
+                <span class="pub-tag">MMM</span>
+                <span class="pub-tag">Causal Impact</span>
+              </div>
+            </div>
+
+            <div class="pub-actions">
+              <!-- Optional PDF if you later expose a redacted version -->
+              <!-- <a class="btn-download" href="siga_mmm_report.pdf" target="_blank">
+                <i class="fa-solid fa-file-pdf"></i> PDF
+              </a> -->
+              <button class="btn-download pub-abs-btn" type="button">
+                <i class="fa-solid fa-align-left"></i> Summary
+              </button>
+              <button class="btn-download pub-bib-btn" type="button">
+                <i class="fa-solid fa-code"></i> BibTeX
+              </button>
+            </div>
+
+            <div class="pub-abstract">
+              <p>
+                This report documents the design and deployment of a full-funnel marketing mix model
+                and player analytics pipeline for multi-channel gaming operations. The work integrates
+                media attribution, segmentation, uplift modeling, and scenario-based forecasting to
+                support executive decision-making.
+              </p>
+            </div>
+
+            <pre class="pub-bib">
+@techreport{fagbade_mmm_siga_2024,
+  title       = {Marketing Mix Modeling and Player Analytics for Gaming Revenue Optimization},
+  author      = {Fagbade, Adeyemi},
+  institution = {Saskatchewan Indian Gaming Authority},
+  year        = {2024},
+  note        = {Internal analytics report}
+}
+            </pre>
+          </article>
+
+          <!-- 5. ADDITIONAL SLOT FOR FUTURE WORK / PLACEHOLDER -->
+          <article class="pub-card" data-topic="report">
+            <div class="pub-main">
+              <h2 class="pub-title">
+                Selected Technical Reports & Working Papers
+              </h2>
+              <div class="pub-meta">
+                Various working documents in applied mathematics, data science, and cybersecurity.
+              </div>
+              <div class="pub-tags">
+                <span class="pub-tag">Working Paper</span>
+                <span class="pub-tag">Report</span>
+              </div>
+            </div>
+
+            <div class="pub-actions">
+              <button class="btn-download pub-abs-btn" type="button">
+                <i class="fa-solid fa-align-left"></i> Overview
+              </button>
+            </div>
+
+            <div class="pub-abstract">
+              <p>
+                This section can be used to link or summarize additional white papers, internal
+                studies, project reports, or preprints as they become available. You can extend this
+                page by duplicating the card structure and updating the metadata, tags, and BibTeX
+                entries.
+              </p>
+            </div>
+          </article>
+
+        </div> <!-- /.pub-list -->
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Dr. Adeyemi Fagbade
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+</body>
+</html>
