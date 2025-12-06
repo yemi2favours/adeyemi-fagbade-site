@@ -5,17 +5,22 @@
   <title>Projects | Dr. Adeyemi Fagbade</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome (optional for icons on this page) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 <div class="page">
 
+  <!-- HEADER -->
   <header>
     <div class="nav-container">
       <div class="brand">
         <div class="brand-logo">AF</div>
         <div class="brand-text">
           <div class="brand-name">ADEYEMI FAGBADE</div>
-          <div class="brand-sub">Research Scientist · Data Scientist</div>
+          <div class="brand-sub">Research Scientist · Data Scientist · Cybersecurity Analyst</div>
         </div>
       </div>
       <div class="nav-right">
@@ -37,50 +42,275 @@
     </div>
   </header>
 
+  <!-- MAIN -->
   <main class="main">
     <section class="section section-alt">
       <div class="section-inner">
+
+        <!-- PAGE HEADER -->
         <div class="section-header fade-in">
           <div class="section-kicker">Projects</div>
-          <h1 class="section-title">Selected applied projects</h1>
+          <h1 class="section-title">Applied Data, Cybersecurity & Simulation Projects</h1>
           <p class="section-sub">
-            A sample of data, analytics, and decision-support projects I’ve led or contributed to.
+            A selection of industry and academic projects spanning gaming analytics, cybersecurity,
+            numerical simulation, and decision-support systems.
           </p>
         </div>
 
-        <div class="grid-auto">
-          <article class="card fade-in">
-            <h3>Self-Service Revenue Insights Portal</h3>
-            <p class="muted">
-              Python Flask API + BI dashboards providing GTM teams with interactive revenue, cohort, and funnel analytics
-              for gaming operations. Achieved NPS 78 from internal stakeholders.
-            </p>
-          </article>
+        <!-- ==================================== -->
+        <!-- FEATURED PROJECTS                     -->
+        <!-- ==================================== -->
+        <section class="fade-in" aria-label="Featured projects">
+          <h2 class="section-subheading">Featured Projects</h2>
+          <p class="muted">
+            High-impact work at the intersection of data science, cybersecurity, and computational
+            modeling.
+          </p>
 
-          <article class="card fade-in">
-            <h3>HR Workforce Analytics Dashboard</h3>
-            <p class="muted">
-              Power BI solution tracking workforce composition, diversity, tenure, and attrition with drill-downs
-              by role, region, and demographic segments.
-            </p>
-          </article>
+          <div class="grid-auto" style="margin-top: 1.2rem;">
+            <!-- 1. Self-Service Revenue Insights Portal -->
+            <article class="card">
+              <h3>Self-Service Revenue Insights Portal</h3>
+              <p class="muted">
+                A self-service analytics portal built for gaming leadership to explore revenue,
+                player behavior, and marketing performance without relying on ad-hoc queries.
+                Combines automated data pipelines with intuitive dashboards for near real-time
+                decision-making.
+              </p>
+              <ul class="list">
+                <li>Interactive revenue, cohort, and funnel views for multi-property gaming operations.</li>
+                <li>Integrated forecasting for slot, table, ETG, and hospitality revenue streams.</li>
+                <li>Role-based views for executives, marketing, and operations teams.</li>
+              </ul>
+              <div class="pills">
+                <span class="pill">Python</span>
+                <span class="pill">SQL</span>
+                <span class="pill">Power BI</span>
+                <span class="pill">ETL / Data Modeling</span>
+                <span class="pill">Forecasting</span>
+              </div>
+            </article>
 
-          <article class="card fade-in">
-            <h3>Maven Market Grocery Analytics</h3>
-            <p class="muted">
-              Retail KPI dashboards for sales, profit, returns, and regional performance; incorporated forecasting to
-              support assortment and pricing strategies.
-            </p>
-          </article>
+            <!-- 2. Fileless Malware Detection Framework -->
+            <article class="card">
+              <h3>Fileless Malware Detection & Threat Intelligence Framework</h3>
+              <p class="muted">
+                Design and prototyping of a behavioral analytics framework to detect fileless malware
+                campaigns using system telemetry, registry events, and memory-resident indicators
+                rather than traditional file signatures.
+              </p>
+              <ul class="list">
+                <li>Modeled process, registry, and PowerShell activity for anomaly-based detection.</li>
+                <li>Mapped behaviors to MITRE ATT&amp;CK techniques to support triage and hunting.</li>
+                <li>Integrated threat intelligence feeds with SIEM-style log aggregation.</li>
+              </ul>
+              <div class="pills">
+                <span class="pill">Cybersecurity</span>
+                <span class="pill">Fileless Malware</span>
+                <span class="pill">Anomaly Detection</span>
+                <span class="pill">Python</span>
+                <span class="pill">Threat Intel</span>
+              </div>
+            </article>
 
-          <article class="card fade-in">
-            <h3>Sprocket Central Customer Insights</h3>
-            <p class="muted">
-              End-to-end analytics project involving data quality assessment, customer segmentation, and targeted
-              marketing recommendations using Excel Power Query and Power Pivot.
-            </p>
-          </article>
-        </div>
+            <!-- 3. CES / OpenFOAM Turbulence Simulation Suite -->
+            <article class="card">
+              <h3>CES / OpenFOAM Turbulence Simulation Suite</h3>
+              <p class="muted">
+                A suite of high-fidelity simulation workflows implementing Continuous Eddy Simulation
+                (CES) and hybrid RANS–LES strategies for wall-bounded and free-shear turbulent flows
+                in OpenFOAM and related CFD ecosystems.
+              </p>
+              <ul class="list">
+                <li>Automated case setup and parameter scans for wall-mounted hump and canonical flows.</li>
+                <li>Post-processing pipeline for skin friction, pressure distributions, and spectral content.</li>
+                <li>Validated CES behavior against RANS, DES, and LES benchmarks at high Reynolds numbers.</li>
+              </ul>
+              <div class="pills">
+                <span class="pill">OpenFOAM</span>
+                <span class="pill">CFD</span>
+                <span class="pill">CES</span>
+                <span class="pill">HPC</span>
+                <span class="pill">Python Automation</span>
+              </div>
+            </article>
+
+            <!-- 4. Wind Energy System Modeling & Mesoscale–Microscale Coupling -->
+            <article class="card">
+              <h3>Wind Energy System Modeling & Mesoscale–Microscale Coupling</h3>
+              <p class="muted">
+                Collaborative project on linking mesoscale atmospheric models with microscale wind-farm
+                simulations to improve energy yield estimation and loading predictions on turbines.
+              </p>
+              <ul class="list">
+                <li>Analyzed coupling strategies between weather prediction models and CFD solvers.</li>
+                <li>Studied wake interactions and turbulence structures relevant for farm layout planning.</li>
+                <li>Contributed to methodology for translating climatological wind data into actionable
+                    turbine-level inflow conditions.</li>
+              </ul>
+              <div class="pills">
+                <span class="pill">Wind Energy</span>
+                <span class="pill">CFD</span>
+                <span class="pill">Mesoscale–Microscale</span>
+                <span class="pill">Scientific Computing</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ==================================== -->
+        <!-- DATA & BUSINESS ANALYTICS PROJECTS   -->
+        <!-- ==================================== -->
+        <section class="fade-in" style="margin-top: 3rem;">
+          <h2 class="section-subheading">Data & Business Analytics</h2>
+          <p class="muted">
+            Applied analytics and decision-support systems for gaming, HR, and retail contexts.
+          </p>
+
+          <div class="grid-auto" style="margin-top: 1.2rem;">
+            <article class="card">
+              <h3>Gaming Revenue Forecasting & Scenario Planning</h3>
+              <p class="muted">
+                Time-series modeling of slot, table, and hospitality revenue across multiple casinos.
+                Built SARIMAX-based models augmented with macroeconomic indicators to support budgeting,
+                risk analysis, and promotional planning.
+              </p>
+              <ul class="list">
+                <li>Integrated macro variables (CPI, motor sales, trade indices) with casino KPIs.</li>
+                <li>Produced what-if scenarios for demand shocks and marketing interventions.</li>
+              </ul>
+              <div class="pills">
+                <span class="pill">SARIMAX</span>
+                <span class="pill">Time Series</span>
+                <span class="pill">Forecasting</span>
+                <span class="pill">Python</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>HR Workforce Analytics Dashboard</h3>
+              <p class="muted">
+                Power BI solution tracking workforce composition, diversity, tenure, and attrition with
+                drill-downs by role, property, and demographic segments to inform HR planning and
+                organizational strategy.
+              </p>
+              <ul class="list">
+                <li>Modeled hiring funnels, internal mobility, and turnover hotspots.</li>
+                <li>Delivered interactive dashboards with row-level security for HR stakeholders.</li>
+              </ul>
+              <div class="pills">
+                <span class="pill">Power BI</span>
+                <span class="pill">DAX</span>
+                <span class="pill">HR Analytics</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Maven Market Grocery Analytics</h3>
+              <p class="muted">
+                Retail analytics project analyzing sales, margin, and returns across product categories
+                and regions. Incorporated basic forecasting and basket-level insights for assortment
+                and pricing strategy.
+              </p>
+              <div class="pills">
+                <span class="pill">Retail Analytics</span>
+                <span class="pill">Power BI</span>
+                <span class="pill">SQL</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Sprocket Central Customer Insights</h3>
+              <p class="muted">
+                End-to-end analytics workflow including data cleaning, customer segmentation, and
+                targeting recommendations for a bike and accessories retailer.
+              </p>
+              <div class="pills">
+                <span class="pill">Segmentation</span>
+                <span class="pill">Customer Analytics</span>
+                <span class="pill">Excel / Power Query</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ==================================== -->
+        <!-- CYBERSECURITY & THREAT ANALYTICS     -->
+        <!-- ==================================== -->
+        <section class="fade-in" style="margin-top: 3rem;">
+          <h2 class="section-subheading">Cybersecurity & Threat Analytics</h2>
+          <p class="muted">
+            Projects focusing on malware behavior, intrusion detection, and security analytics.
+          </p>
+
+          <div class="grid-auto" style="margin-top: 1.2rem;">
+            <article class="card">
+              <h3>Fileless Attack Simulation & Detection Lab</h3>
+              <p class="muted">
+                A lab environment for reproducing fileless attack chains using PowerShell, WMI, and
+                registry-resident payloads to test detection rules and SIEM correlation logic.
+              </p>
+              <div class="pills">
+                <span class="pill">Fileless Malware</span>
+                <span class="pill">Blue Team</span>
+                <span class="pill">Windows Internals</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>SIEM Log Analytics & Anomaly Detection</h3>
+              <p class="muted">
+                Prototyped anomaly detection over authentication events, process creation logs, and
+                network flows to highlight suspicious behavior and lateral movement patterns.
+              </p>
+              <div class="pills">
+                <span class="pill">SIEM</span>
+                <span class="pill">Log Analytics</span>
+                <span class="pill">Python</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ==================================== -->
+        <!-- SIMULATION & NUMERICAL MODELING      -->
+        <!-- ==================================== -->
+        <section class="fade-in" style="margin-top: 3rem;">
+          <h2 class="section-subheading">Simulation & Numerical Modeling</h2>
+          <p class="muted">
+            Numerical methods and scientific computing projects beyond the core CFD turbulence work.
+          </p>
+
+          <div class="grid-auto" style="margin-top: 1.2rem;">
+            <article class="card">
+              <h3>Viscoelastic & Casson Fluid Flow Modeling</h3>
+              <p class="muted">
+                Developed and analyzed numerical schemes for unsteady MHD boundary-layer flows of
+                non-Newtonian fluids, incorporating radiation, chemical reactions, and porous media
+                effects.
+              </p>
+              <div class="pills">
+                <span class="pill">Non-Newtonian Fluids</span>
+                <span class="pill">Spectral Methods</span>
+                <span class="pill">MHD</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Spectral & Homotopy-Based Numerical Solvers</h3>
+              <p class="muted">
+                Implemented spectral relaxation and homotopy analysis approaches for boundary-layer
+                and convective flow problems, with a focus on convergence behavior and error control.
+              </p>
+              <div class="pills">
+                <span class="pill">Spectral Methods</span>
+                <span class="pill">Homotopy Analysis</span>
+                <span class="pill">BVPs</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
       </div>
     </section>
   </main>
