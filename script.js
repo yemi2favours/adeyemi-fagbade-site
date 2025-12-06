@@ -161,6 +161,20 @@ if (pubFilterButtons.length && pubCards.length) {
     });
   });
 }
+// =====================================================
+// ABSTRACT TOGGLE (PUBLICATIONS PAGE)
+// =====================================================
+document.querySelectorAll(".pub-abs-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".pub-card");
+    if (!card) return;
+    const abs = card.querySelector(".pub-abstract");
+    if (!abs) return;
+
+    abs.style.display = abs.style.display === "block" ? "none" : "block";
+  });
+});
+
 
 // =====================================================
 // BIBTEX TOGGLE (PUBLICATIONS PAGE)
