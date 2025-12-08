@@ -7,8 +7,48 @@
   <link rel="stylesheet" href="style.css" />
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- reCAPTCHA v3 (replace YOUR_RECAPTCHA_SITE_KEY) -->
+  <script
+    src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY">
+  </script>
+
+  <!-- Firebase SDK (modular, via CDN) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      serverTimestamp
+    } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCjUU_kenrsnRx82RUrFb0rpGvWQTF3TZc",
+      authDomain: "my-pw-project-bad3d.firebaseapp.com",
+      projectId: "my-pw-project-bad3d",
+      storageBucket: "my-pw-project-bad3d.firebasestorage.app",
+      messagingSenderId: "368967037022",
+      appId: "1:368967037022:web:282e517ec940f240ffc4cf",
+      measurementId: "G-LZ899S10W8"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+    // Expose Firestore helpers to non-module script.js
+    window.firebaseDb = db;
+    window.firebaseCollection = collection;
+    window.firebaseAddDoc = addDoc;
+    window.firebaseServerTimestamp = serverTimestamp;
+  </script>
 </head>
 
 <body>
@@ -21,13 +61,15 @@
         <div class="brand-logo">AF</div>
         <div class="brand-text">
           <div class="brand-name">ADEYEMI FAGBADE</div>
-          <div class="brand-sub">Research Scientist · Data Scientist · Cybersecurity Analyst</div>
+          <div class="brand-sub">
+            Research Scientist · Data Scientist · Cybersecurity Analyst
+          </div>
         </div>
       </div>
 
       <div class="nav-right">
-        <button id="themeToggle" class="theme-toggle">🌙 Dark</button>
-        <button id="navToggle" class="nav-toggle">☰</button>
+        <button id="themeToggle" class="theme-toggle" type="button">🌙 Dark</button>
+        <button id="navToggle" class="nav-toggle" type="button">☰</button>
 
         <nav>
           <ul id="navLinks">
@@ -45,27 +87,28 @@
     </div>
   </header>
 
-  <!-- MAIN CONTACT SECTION -->
+  <!-- MAIN -->
   <main class="main">
     <section class="section section-alt">
       <div class="section-inner">
 
+        <!-- PAGE HEADER -->
         <div class="section-header fade-in">
           <div class="section-kicker">Contact</div>
           <h1 class="section-title">Get in Touch</h1>
           <p class="section-sub">
-            Whether you’re reaching out for collaboration, academic discussions, research inquiries,
-            or consulting — I’d love to hear from you.
+            Whether you’re reaching out for collaboration, academic discussions, research
+            inquiries, or consulting — I’d love to hear from you.
           </p>
         </div>
 
         <div class="contact-container-upgraded fade-in">
 
-          <!-- LEFT SECTION -->
+          <!-- LEFT PANEL -->
           <div class="contact-left card contact-left-upgraded">
-            <h2>Let's Connect</h2>
+            <h2>Let’s Connect</h2>
             <p class="muted">
-              Feel free to contact me directly or send a message through the form.
+              Feel free to email me directly or send a message through the form.
             </p>
 
             <div class="contact-email-upgraded">
@@ -73,26 +116,48 @@
               <a href="mailto:yemi2favours@yahoo.co.uk">yemi2favours@yahoo.co.uk</a>
             </div>
 
+            <div class="contact-meta-upgraded">
+              <div>
+                <div class="contact-label">Location</div>
+                <div>Saskatoon, SK, Canada</div>
+              </div>
+              <div>
+                <div class="contact-label">Phone</div>
+                <div>+1 (639) 994-3822</div>
+              </div>
+            </div>
+
             <div class="social-icons-upgraded">
-              <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.linkedin.com/in/adeyemi-fagbade" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com/yemi2favours" target="_blank"><i class="fab fa-github"></i></a>
+              <!-- Update these URLs with your actual profiles -->
+              <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" aria-label="Twitter / X">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/adeyemi-fagbade"
+                 target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/yemi2favours"
+                 target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
             </div>
           </div>
 
-          <!-- RIGHT SECTION (FORM) -->
+          <!-- RIGHT PANEL – CONTACT FORM -->
           <div class="contact-right card contact-right-upgraded">
             <form id="contactForm">
 
               <div class="form-row-upgraded">
                 <div>
-                  <label for="fname">First Name</label>
+                  <label for="fname">First Name *</label>
                   <input id="fname" type="text" required />
                 </div>
 
                 <div>
-                  <label for="lname">Last Name</label>
+                  <label for="lname">Last Name *</label>
                   <input id="lname" type="text" required />
                 </div>
               </div>
@@ -100,25 +165,34 @@
               <label for="email">Email *</label>
               <input id="email" type="email" required />
 
-              <label for="message">Message</label>
-              <textarea id="message" required></textarea>
+              <label for="message">Message *</label>
+              <textarea id="message" rows="5" required
+                        placeholder="How can we collaborate?"></textarea>
 
-              <!-- HUMAN VERIFICATION -->
-              <div class="verify-box-upgraded">
-                <input type="checkbox" id="verifyCheck" required />
-                <label for="verifyCheck">I am not a robot</label>
-              </div>
+              <!-- reCAPTCHA notice -->
+              <p class="muted small recaptcha-note">
+                This site is protected by reCAPTCHA and the Google
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+                  Privacy Policy
+                </a>
+                and
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener">
+                  Terms of Service
+                </a>
+                apply.
+              </p>
 
               <button type="submit" class="btn btn-primary" id="submitBtn">
-                Send Message
+                <span class="btn-label">Send Message</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
               </button>
 
             </form>
 
-            <p id="contactStatus" class="status-message"></p>
+            <p id="contactStatus" class="status-message" aria-live="polite"></p>
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
   </main>
@@ -130,66 +204,21 @@
   <button id="backToTop" title="Back to top">↑</button>
 </div>
 
+<!-- Status Modal (success / error) -->
+<div id="statusModal" class="status-modal" aria-hidden="true">
+  <div class="status-modal-inner">
+    <button type="button" id="statusModalClose" class="status-modal-close" aria-label="Close">
+      &times;
+    </button>
+    <div id="statusModalIcon" class="status-modal-icon"></div>
+    <h2 id="statusModalTitle"></h2>
+    <p id="statusModalText"></p>
+  </div>
+</div>
+
 <script src="script.js"></script>
-
-<!-- FIREBASE SDK -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-  import { getFirestore, collection, addDoc, serverTimestamp }
-    from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyCjUU_kenrsnRx82RUrFb0rpGvWQTF3TZc",
-    authDomain: "my-pw-project-bad3d.firebaseapp.com",
-    projectId: "my-pw-project-bad3d",
-    storageBucket: "my-pw-project-bad3d.firebasestorage.app",
-    messagingSenderId: "368967037022",
-    appId: "1:368967037022:web:282e517ec940f240ffc4cf",
-    measurementId: "G-LZ899S10W8"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  /* -------- FORM SUBMISSION -------- */
-  const form = document.getElementById("contactForm");
-  const statusBox = document.getElementById("contactStatus");
-  const submitBtn = document.getElementById("submitBtn");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Sending...";
-
-    try {
-      await addDoc(collection(db, "messages"), {
-        fname: document.getElementById("fname").value,
-        lname: document.getElementById("lname").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
-        timestamp: serverTimestamp()
-      });
-
-      statusBox.textContent = "Message sent successfully! Thank you.";
-      statusBox.style.color = "green";
-      form.reset();
-
-    } catch (error) {
-      statusBox.textContent = "Error sending message. Please try again.";
-      statusBox.style.color = "red";
-      console.error(error);
-
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Send Message";
-    }
-  });
-</script>
-
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
