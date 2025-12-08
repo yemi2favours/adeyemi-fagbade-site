@@ -830,55 +830,72 @@ html[data-theme="dark"] .pub-bib {
     gap: 0.8rem;
   }
 }
-/* CONTACT PAGE UPGRADE -------------------------------------------------- */
+/* ================= CONTACT PAGE UPGRADED ================= */
 
-.contact-container {
+.contact-container-upgraded {
   display: grid;
-  grid-template-columns: 1.2fr 1.5fr;
-  gap: 2rem;
+  grid-template-columns: 1.1fr 1.5fr;
+  gap: 2.5rem;
   margin-top: 2rem;
+  align-items: stretch;
 }
 
-.contact-left h2 {
-  margin-bottom: 0.4rem;
+.contact-left-upgraded {
+  padding: 2rem;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fff, #f6f6ff);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.05);
 }
 
-.contact-email {
-  margin: 1rem 0;
-  font-size: 1rem;
+.contact-left-upgraded h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.contact-email-upgraded {
+  margin: 1.4rem 0;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.7rem;
+  font-size: 1rem;
 }
 
-.contact-email i {
+.contact-email-upgraded i {
+  font-size: 1.3rem;
   color: var(--accent);
-  font-size: 1.2rem;
 }
 
-.social-icons {
+.social-icons-upgraded {
   margin-top: 1rem;
   display: flex;
   gap: 1rem;
 }
 
-.social-icons a {
+.social-icons-upgraded a {
   font-size: 1.4rem;
   color: var(--text-main);
-  transition: 0.2s ease;
+  transition: 0.25s ease;
 }
 
-.social-icons a:hover {
+.social-icons-upgraded a:hover {
+  transform: translateY(-3px);
   color: var(--accent);
 }
 
-/* FORM ROW */
-.form-row {
-  display: flex;
-  gap: 1rem;
+.contact-right-upgraded {
+  padding: 2rem;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.06);
 }
 
-.verify-box {
+.form-row-upgraded {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.verify-box-upgraded {
   margin: 1rem 0;
   display: flex;
   align-items: center;
@@ -886,8 +903,6 @@ html[data-theme="dark"] .pub-bib {
 }
 
 .status-message {
-  margin-top: 1rem;
-  font-size: 0.9rem;
+  margin-top: 0.8rem;
   font-weight: 600;
 }
-
