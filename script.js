@@ -233,3 +233,29 @@ if (timeline) {
     timeline.style.setProperty("--line-visible", visible + "px");
   });
 }
+// =====================================================
+// CONTACT FORM VERIFICATION
+// =====================================================
+const contactForm = document.getElementById("contactForm");
+const contactStatus = document.getElementById("contactStatus");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const verify = document.getElementById("verifyCheck").checked;
+
+    if (!verify) {
+      contactStatus.textContent = "Please verify that you are not a robot.";
+      contactStatus.style.color = "red";
+      return;
+    }
+
+    contactStatus.textContent = "Message sent successfully! (static mode)";
+    contactStatus.style.color = "green";
+
+    contactForm.reset();
+  });
+}
+
+
